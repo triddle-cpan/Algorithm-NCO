@@ -1,0 +1,16 @@
+.includepath
+.project
+
+MANIFEST.bak
+MANIFEST.SKIP.bak
+
+t/refdata
+
+author*.pl
+
+Build
+_build/
+blib/
+MYMETA.json
+MYMETA.yml
+

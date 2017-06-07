@@ -1,0 +1,20 @@
+Build.PL
+lib/Algorithm/NCO.pm
+lib/Algorithm/NCO/Analyzer.pm
+lib/Algorithm/NCO/NCO.pod
+MANIFEST			This list of files
+t/100-load.t
+t/500-spectrum.t
+t/900-reference.t
+t/lib/Algorithm/NCO/Test.pm
+t/lib/Algorithm/NCO/Test/Reference.pm
+t/refdata/1000hz.wav
+t/refdata/100hz.wav
+t/refdata/10hz.wav
+t/refdata/2000hz.wav
+t/refdata/200hz.wav
+t/refdata/25hz.wav
+t/refdata/3000hz.wav
+t/refdata/500hz.wav
+t/refdata/50hz.wav
+t/refdata/5hz.wav
