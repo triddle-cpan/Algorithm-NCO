@@ -189,6 +189,32 @@ sub complex {
     return $sample;
 }
 
+sub quadrature {
+    my ($self, $count) = @_;
+    my $phase = $self->phase;
+    my $amplitude = $self->amplitude;
+    my $phase_step = $self->phase_step;
+    my @samples;
+
+    $count = 1 unless defined $count;
+
+    for(my $i = 0; $i < $count; $i++) {
+        my $i_phase = $phase;
+        my $q_phase = _rad_wrap($i_phase + .25 * RAD);
+
+        push(@samples,
+            $self->_generator->($i_phase) * $amplitude,
+            $self->_generator->($q_phase) * $amplitude,
+        );
+
+        $phase = _rad_wrap($phase + $phase_step);
+    }
+
+    $self->phase($phase);
+
+    return @samples;
+}
+
 # create a list of valid names that can be specified
 # for the shape attribute
 sub shape_names {
